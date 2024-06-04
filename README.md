@@ -7,16 +7,19 @@
 + [Introduccion](#introduccion)
 + [ETL](#etl)
 + [EDA](#eda)
++ [Modelado con MySQL](#modelado-en-mysql)
++ [Dashboard](#dashboard)
++ [Concluciones](#concluciones)
++ [Adicionales](#adicionales)
 
 # Introduccion
 
-En el siguiente proyecto se desempeñara el rol de un Analista de Datos en el que tomaremos datos reales y realizaremos distintas metricas y KPI's que nos llevaran a diversas concluciones.
+Poniendonos en un rol como Analista de datos, nos contactan de El Observatorio de Movilidad y Seguridad Vial (OMSV), centro de estudios que se encuentra bajo la órbita de la Secretaría de Transporte del Gobierno de la Ciudad Autónoma de Buenos Aires y nos piden analisar los accidentes de transito en la ciudad de Buenos Aires. Para esto se nos proporciona un excel con datos de accidentes desde el año 2016 hasta el año 2021, de los cuales debemos sacar distintas metricas y KPI'S que nos permitan ver la accidentalidad en esta ciudad, y que tambien nos permita llegar a alguna conclucion para poder reducir esta tasa de accidentalidad.
 
 # <h1 align=center> **Proceso** </h1>
 
-<p align=center><img src=Imagenes/Solucion.png><p>
-
 # ETL
+
 El primer paso para este proceso fue la limpieza de los datos suministrados en un formato `.xlsx`, para esto observamos que aunque no hay valores duplicados si hay valores faltantes.
 
 <p align=center><img src=Imagenes/Informacion_DF.png><p>
@@ -24,4 +27,24 @@ El primer paso para este proceso fue la limpieza de los datos suministrados en u
 Segun las necesidades del analisis decido eliminar por completo la columna de `Altitud` y en la columna de `Cruce` decido imputar los datos faltantes teniendo en cuenta la columna `Direccion Normalizada`, despues de esto procedo a tomar las columnas que voy a utilizar y guardo los dataframes en archivos CSV *(El proceso completo se encuentra en el notebook [ETL](Notebooks/ETL.ipynb))*.
 
 # EDA
+...
 
+
+# Modelado en MySQL
+
+Se creo una base de datos en el motor MySQL a partir de los archivos CSV, para esto se creo la base de datos y las tablas necesarias y se importaron los archivos CSV para asi llenar los campos de la base de datos (Este query se encuentra en el archivo [Creacion_Tablas](SQL/Creacion_Tablas.sql)).
+
+<p align=center><img src=Imagenes/SQL.png><p>
+
+Despues de esto unicamente se busca la ruta del archivo que se quiere seleccionar y se imputaran los datos automaticamente.
+
+
+# Dashboard
+...
+
+# Concluciones
+
+# Adicionales
+
+* Como conectar MySQL con PowerBI: [Video](https://www.youtube.com/watch?v=lVMtbnh5mYg&t=949s&ab_channel=ElkinRodriguezE.%7CEspecialistaBI)
+* Fuente de datos: [Homicidios](https://docs.google.com/spreadsheets/d/1nq00jGIZHQ1RLSET43zKnUsMsoFb-pBg/edit#gid=1625530738)
