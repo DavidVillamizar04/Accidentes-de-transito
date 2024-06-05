@@ -32,19 +32,28 @@ Segun las necesidades del analisis decido eliminar por completo la columna de `A
 
 # Modelado en MySQL
 
-Se creo una base de datos en el motor MySQL a partir de los archivos CSV, para esto se creo la base de datos y las tablas necesarias y se importaron los archivos CSV para asi llenar los campos de la base de datos (Este query se encuentra en el archivo [Creacion_Tablas](SQL/Creacion_Tablas.sql)).
+Se creo una base de datos en el motor MySQL a partir de los archivos CSV, para esto se creo la base de datos y las tablas necesarias y se importaron los archivos CSV para asi llenar los campos de la base de datos (La base de datos se encuentra en la carpeta SQL con el nombre de [Accidentes de transito](SQL/Accidentes%20de%20transito.sql)).
 
 <p align=center><img src=Imagenes/SQL.png><p>
 
-Despues de esto unicamente se busca la ruta del archivo que se quiere seleccionar y se imputaran los datos automaticamente.
+Despues de esto unicamente se busca la ruta del archivo que se quiere seleccionar y se imputaran los datos automaticamente, quedando de la siguiente forma el diagrama de la base de datos:
+
+<p align=center><img src=Imagenes/Modelo_SQL.png><p>
 
 
 # Dashboard
-...
+Antes de realizar el dasboard, se debe realizar la coneccion de la base de datos para esto se llenaran los campos que se encuentran en la imagen (por ejemplo: Servidor: localhost:1111  Base de datos: Accidentes)
+
+<p align=center><img src=Imagenes/PowerBI.png><p>
+
+porcedi a ralizar las metricas que considere mas importantes y construi los KPI'S requeridos, todos estos se encuentran dentro del archivo [Dashboard_accidentes_transito_BA](Dashboard/Dashboard_accidentes_transito_BA.pbix).
+
+<p align=center><img src=Imagenes/Dashboard.png><p>
 
 # Concluciones
 
 # Adicionales
 
 * Como conectar MySQL con PowerBI: [Video](https://www.youtube.com/watch?v=lVMtbnh5mYg&t=949s&ab_channel=ElkinRodriguezE.%7CEspecialistaBI)
+* Como importar o exportar una base de datos MySQL: [Video](https://www.youtube.com/watch?v=jTs1nSwAcRM&ab_channel=CristianBallesteros)
 * Fuente de datos: [Homicidios](https://docs.google.com/spreadsheets/d/1nq00jGIZHQ1RLSET43zKnUsMsoFb-pBg/edit#gid=1625530738)
