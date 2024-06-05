@@ -27,8 +27,10 @@ El primer paso para este proceso fue la limpieza de los datos suministrados en u
 Segun las necesidades del analisis decido eliminar por completo la columna de `Altitud` y en la columna de `Cruce` decido imputar los datos faltantes teniendo en cuenta la columna `Direccion Normalizada`, despues de esto procedo a tomar las columnas que voy a utilizar y guardo los dataframes en archivos CSV *(El proceso completo se encuentra en el notebook [ETL](Notebooks/ETL.ipynb))*.
 
 # EDA
-...
+Dentro del EDA realice analisis de datos cuantitativos y cualitativos, a partir de los dataset anteriormente limpiados:
+<p align=center><img src=Imagenes/Histograma.png><p>
 
+Los demas graficos junto a sus resoectivos analicis se encuentran en el archivo [EDA](Notebooks/EDA.ipynb)
 
 # Modelado en MySQL
 
@@ -51,6 +53,10 @@ porcedi a ralizar las metricas que considere mas importantes y construi los KPI'
 <p align=center><img src=Imagenes/Dashboard.png><p>
 
 # Concluciones
++ El sexo con mas tasa de accidentalidad es el hombre
++ Las horas en que mas frecuentemente se presentan accidentes son en las horas de la mañana
++ La comuna en la que mas accidentes se han presentado es en la comuna numero 1
++ Los dos agentes viales que mas sufren de accidentalidad son los conductores y los peatones.
 
 # Adicionales
 
